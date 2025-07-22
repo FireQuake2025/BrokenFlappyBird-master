@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 749682264}
   - component: {fileID: 749682267}
   m_Layer: 0
-  m_Name: g
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1222,7 +1222,7 @@ GameObject:
   - component: {fileID: 1126978222}
   - component: {fileID: 1126978223}
   m_Layer: 0
-  m_Name: p
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2241,12 +2241,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077817617}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e184998de6fc6de44a8fa51a7cee0034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 8895835194987703811, guid: 1ba1edbadf2e9b445a570241889d50da, type: 3}
   spawnRate: 0.2
   randomVariable: 1
   wherewewanttheprefabtostart: {fileID: 1689678197}
