@@ -56,28 +56,28 @@ public class Bird : MonoBehaviour
     {
         float verticalVelocity = birdRB.linearVelocity.y;
 
-        float t = 0f;
+        float tilt = 0f;
         if (verticalVelocity > 0)
         {
-            t = Mathf.InverseLerp(0, maxJumpVelocity, verticalVelocity);
+            tilt = Mathf.InverseLerp(0, maxJumpVelocity, verticalVelocity);
         }
         else
         {
-            t = Mathf.InverseLerp(0, -maxJumpVelocity, verticalVelocity);
-            if (t < 0)
+            tilt = Mathf.InverseLerp(0, -maxJumpVelocity, verticalVelocity);
+            if (tilt < 0)
             {
-                t = 0;
+                tilt = 0;
             }
         }
         float targetAngle = 0f;
 
         if(verticalVelocity > 0)
         {
-            targetAngle = Mathf.Lerp(0, maxUpwardAngle, t);
+            targetAngle = Mathf.Lerp(0, maxUpwardAngle, tilt);
         }
         else
         {
-            targetAngle = Mathf.Lerp(0, maxDownwardAngle, t);
+            targetAngle = Mathf.Lerp(0, maxDownwardAngle, tilt);
         }
         
         float currentZ = transform.eulerAngles.z;
