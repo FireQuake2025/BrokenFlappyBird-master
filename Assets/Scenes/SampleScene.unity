@@ -1763,7 +1763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &1316777440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2005,7 +2005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1661459961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2246,10 +2246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e184998de6fc6de44a8fa51a7cee0034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8895835194987703811, guid: 1ba1edbadf2e9b445a570241889d50da, type: 3}
-  spawnRate: 0.2
-  randomVariable: 1
-  wherewewanttheprefabtostart: {fileID: 1689678197}
+  PipePrefab: {fileID: 8895835194987703811, guid: 1ba1edbadf2e9b445a570241889d50da, type: 3}
+  SpawnRate: 0.1
+  RandomVariable: 1
+  PrefabStartLocation: {fileID: 6445475889938657756, guid: 1ba1edbadf2e9b445a570241889d50da, type: 3}
 --- !u!1 &2110664486
 GameObject:
   m_ObjectHideFlags: 0
