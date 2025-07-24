@@ -12,8 +12,7 @@ public class GroundScroll : MonoBehaviour
 
         if (transform.position.x <= resetPositionX)
         {
-            Vector2 newPos = new Vector2(startPositionX, transform.position.y);
-            transform.position = newPos;
+            Destroy(gameObject);
         }
     }
 }
