@@ -4,15 +4,15 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public TMP_Text sText;
+    public TMP_Text ScoreText;
     public GameObject screen1;
     public GameObject screen2;
     public GameObject screen3;
-    public GameObject sUI;
+    public GameObject ScoreUI;
 
     public void UpdateScore(int score)
     {
-        sText.text = score.ToString();
+        ScoreText.text = $"Score: {score}";
     }
 
     public void ShowStart()
@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
         screen1.SetActive(true);
         screen2.SetActive(false);
         screen3.SetActive(false);
-        sUI.SetActive(false);
+        ScoreUI.SetActive(false);
     }
 
     public void HideStart()
@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
     public void HideReady()
     {
         screen2.SetActive(false);
-        sUI.SetActive(true);
+        ScoreUI.SetActive(true);
     }
 
     public void ShowGameOver()

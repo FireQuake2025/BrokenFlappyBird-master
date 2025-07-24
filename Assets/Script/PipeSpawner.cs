@@ -6,7 +6,7 @@ public class PipeSpawner : MonoBehaviour
     public float SpawnRate = .1f;
     public float RandomVariable = 1f;
     public Transform PrefabStartLocation;
-    
+
     private float introTimer = float.MaxValue;
     private bool isSpawning = false;
 
