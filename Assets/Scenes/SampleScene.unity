@@ -347,6 +347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8569759316014392139, guid: b3630cbe22ab30c4b994c7c36fbb58c3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8940748594480930828, guid: b3630cbe22ab30c4b994c7c36fbb58c3, type: 3}
       propertyPath: m_Name
       value: Ground
@@ -1025,8 +1029,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dac129373b4e949a789e9cf9cebf31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceHeight: 25
-  bounceDuration: 0.5
+  bounceHeight: 50
+  bounceDuration: 1
 --- !u!1 &1048608688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1048608690}
   - component: {fileID: 1048608689}
+  - component: {fileID: 1048608691}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -1088,15 +1093,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 5526677527330610540, guid: 210493843f66aee42981265978864341, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.44, y: 2.56}
+  m_Size: {x: 6, y: 10.666667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1048608690
@@ -1114,6 +1119,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1048608691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048608688}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad160665ad30be468746c093f60ac00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: 2
+  resetPositionX: 0
+  startPositionX: 0
 --- !u!1 &1126978217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,12 +1685,12 @@ GameObject:
   - component: {fileID: 1316777441}
   - component: {fileID: 1316777440}
   m_Layer: 5
-  m_Name: Screen3
+  m_Name: GameOverScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &1316777440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1861,7 +1881,7 @@ GameObject:
   - component: {fileID: 1630145167}
   - component: {fileID: 1630145168}
   m_Layer: 5
-  m_Name: Screen1
+  m_Name: TitleScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1907,7 +1927,7 @@ GameObject:
   - component: {fileID: 1661459961}
   - component: {fileID: 1661459962}
   m_Layer: 5
-  m_Name: Screen2
+  m_Name: ReadyScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2139,9 +2159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1303700497}
-  screen1: {fileID: 1630145166}
-  screen2: {fileID: 1661459960}
-  screen3: {fileID: 1316777439}
+  TitleScreen: {fileID: 1630145166}
+  ReadyScreen: {fileID: 1661459960}
+  GameoverScreen: {fileID: 1316777439}
   ScoreUI: {fileID: 1303700495}
 --- !u!114 &2077817621
 MonoBehaviour:
